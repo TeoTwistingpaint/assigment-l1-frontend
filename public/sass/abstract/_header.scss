@@ -1,0 +1,205 @@
+.header {
+  width: auto;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -170px;
+  z-index: 9;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+
+  @media screen and (max-width: $mobile) {
+    left: 0;
+    width: 100%;
+    height: auto;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.15);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.15);
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.15);
+  }
+
+  &.visible {
+    left: 0;
+  }
+
+  &__container {
+    @include wrapper-page;
+    max-width: 250px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $mobile) {
+      max-width: 100%;
+    }
+  }
+
+  .hamburger {
+    padding: 0;
+    font-size: 0;
+    vertical-align: middle;
+    display: inherit;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner:after,
+  .hamburger-inner:before {
+    width: 35px;
+    height: 2px;
+    border-radius: 0;
+    background-color: black;
+  }
+
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner:after,
+  .hamburger.is-active .hamburger-inner:before {
+    background-color: black;
+  }
+
+  .hamburger-inner {
+    width: 25px;
+  }
+
+  .hamburger--squeeze.is-active .hamburger-inner {
+    width: 35px;
+  }
+
+  .hamburger-inner:before {
+    top: -8px;
+  }
+
+  .hamburger-inner:after {
+    bottom: -8px;
+  }
+
+  .menu {
+    flex-basis: 100%;
+    margin-top: 40px;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    background-color: white;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+    @media screen and (max-width: $mobile) {
+      margin-top: -200px;
+    }
+
+    ul {
+      li {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        p,
+        a {
+          cursor: pointer;
+          color: black;
+          letter-spacing: 0.4rem;
+          font-size: 15px;
+          font-weight: 600;
+          font-family: $main-font;
+          -webkit-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s;
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+
+      @media screen and (max-width: $mobile) {
+        margin-top: 40px;
+      }
+    }
+
+    .socials {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+
+      a {
+        flex-basis: 26px;
+
+        .image {
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          width: 26px;
+          height: 26px;
+          max-width: 100%;
+          max-height: 100%;
+          -webkit-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
+
+          &--ig {
+            background-image: url("/images/ico-ig.png");
+            margin-right: 15px;
+          }
+          &--email {
+            background-image: url("/images/ico-mail.png");
+          }
+        }
+      }
+    }
+
+    .photography-stores {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+
+      a {
+        font-family: $main-font;
+        color: black;
+        letter-spacing: 0.25rem;
+        font-weight: 600;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .logo {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+    @media screen and (max-width: $mobile) {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    a{
+      display: block;
+      font-size: 0;
+    }
+
+    img {
+      max-width: 50px;
+      width: 100%;
+    }
+  }
+}

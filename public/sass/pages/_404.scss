@@ -1,0 +1,120 @@
+#my404 {
+  @media screen and (max-width: $mobile) {
+    margin-top: 9px;
+  }
+  .container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 189px);
+    background-image: url("/images/head-404.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: $mobile) {
+      height: calc(100vh - 156px);
+    }
+  }
+
+  .claim {
+    @include wrapper-page;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding-left: 100px;
+    padding-right: 20px;
+    text-align: center;
+
+    @media screen and (max-width: $mobile) {
+      padding-left: 20px;
+    }
+
+    .white-layer {
+      background-color: rgba(black, 0.2);
+    }
+
+    h1,
+    h2 {
+      font-family: $title-font;
+      text-align: center;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 0.4rem;
+      margin-bottom: 30px;
+      line-height: 1.2em;
+
+      @media screen and (max-width: $mobile) {
+        text-align: center;
+        font-size: 28px;
+      }
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 40px;
+
+      @media screen and (max-width: $mobile) {
+        font-size: 21px;
+      }
+    }
+
+    .btn {
+      position: relative;
+      background-color: transparent;
+      margin: auto;
+      display: inline-block;
+      cursor: pointer;
+      border: 1px solid white;
+      padding: 10px 12px 10px 20px;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+
+      span {
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        font-family: $main-font;
+        color: white;
+        font-weight: 600;
+        font-size: 15px;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+
+        @media screen and (max-width: $mobile) {
+          font-size: 1rem;
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 0%;
+        height: 100%;
+        z-index: -1;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+      }
+
+      &:hover {
+        opacity: 1;
+        span {
+          color: black;
+        }
+
+        &:before {
+          width: 100%;
+          background: white;
+        }
+      }
+    }
+  }
+}
