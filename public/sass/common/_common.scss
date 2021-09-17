@@ -42,6 +42,38 @@ table {
   text-align: center;
 }
 
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid $azure;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th {
+  font-weight: bold !important;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
 fieldset,
 img {
   border: 0;
@@ -102,7 +134,7 @@ acronym {
 * {
   margin: 0;
   padding: 0;
-  font: 15px/1.3em "Lato", sans-serif;
+  font: 15px/1.3em $main-font;
   color: #343333;
   z-index: 1;
   -webkit-text-size-adjust: none;
@@ -287,13 +319,9 @@ div.clear {
 
 .wrapper__content {
   width: 100%;
-  padding-left: 80px;
-  padding-right: 20px;
-  margin-top: 11px;
-
-  @media screen and (max-width: $mobile) {
-    padding-left: 20px;
-  }
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 50px;
 
   h1,
   h3 {

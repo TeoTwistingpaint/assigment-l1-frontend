@@ -1,0 +1,53 @@
+.navbar {
+  width: auto;
+  width: 100%;
+  z-index: 9;
+  background-color: white;
+  /*-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.15);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.15);
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.15);*/
+
+  @media screen and (max-width: $mobile) {
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  &__container {
+    @include wrapper-page;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+
+    &:after {
+      content: "";
+      width: calc(100% - 50px);
+      height: 1px;
+      background-color: black;
+      position: absolute;
+      bottom: 0;
+      left: 25px;
+    }
+
+    .logo {
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      h1 {
+        font-family: $main-font;
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 0;
+        color: $azure;
+      }
+    }
+  }
+}

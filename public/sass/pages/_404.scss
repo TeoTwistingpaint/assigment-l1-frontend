@@ -3,10 +3,10 @@
     margin-top: 9px;
   }
   .container {
+    //background-image: url("/images/head-404.jpg");
     position: relative;
     width: 100%;
     height: calc(100vh - 189px);
-    background-image: url("/images/head-404.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@
 
     h1,
     h2 {
-      font-family: $title-font;
+      font-family: $main-font;
       text-align: center;
       color: white;
       font-size: 36px;
