@@ -6,14 +6,13 @@
 @import "common/mixins";
 
 /*
-*   ABSTRACT
-*/
-@import "abstract/navbar";
-@import "abstract/footer";
-@import "abstract/darkmode";
-
-/*
 *   PAGES
 */
 @import "pages/home";
 @import "pages/404";
+
+/*
+*   ABSTRACT
+*/
+@import "abstract/navbar";
+@import "abstract/footer";
