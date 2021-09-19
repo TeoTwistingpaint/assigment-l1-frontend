@@ -2,13 +2,13 @@ const Table = ({ earthquakes }) => {
   const TableHeaderRow = () => {
     return (
       <tr>
-        <th>Timestamp</th>
+        <th>Time</th>
         <th>Latitude</th>
         <th>Longitude</th>
         <th>Depth</th>
         <th>Size</th>
         <th>Quality</th>
-        <th>Human Readable Location</th>
+        <th>Location</th>
       </tr>
     );
   };

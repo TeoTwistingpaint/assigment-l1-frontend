@@ -1,4 +1,23 @@
 .home {
+  .info {
+    p {
+      color: var(--text-color);
+      font-family: $main-font;
+      line-height: 1.8rem;
+      font-size: 18px;
+      margin-bottom: 50px;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    a {
+      color: $azure;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
   .state {
     font-family: $main-font;
     font-size: 18px;
@@ -6,7 +25,7 @@
     text-align: center;
 
     &--error {
-      color: #b61919;
+      color: #c15050;
       font-size: 24px;
     }
 
@@ -48,11 +67,11 @@ thead th:nth-child(4) {
 
 th {
   font-weight: bold !important;
-  background-color: #F7F6F2;
+  background-color: #f7f6f2;
 }
 
-.dark-mode{
-  th{
+.dark-mode {
+  th {
     background-color: $darker;
   }
 }
@@ -121,7 +140,7 @@ select {
   }
 
   min-width: 15ch;
-  max-width: 30ch;
+  max-width: 20ch;
   border: 1px solid var(--select-border);
   border-radius: 0.25em;
   padding: 0.25em 0.5em;
@@ -226,7 +245,7 @@ label {
   }
 
   tr:nth-child(odd) {
-    background: #F7F6F2;
+    background: #f7f6f2;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
@@ -250,7 +269,7 @@ label {
   }
 
   td:nth-of-type(1):before {
-    content: "Timestamp";
+    content: "Time";
   }
   td:nth-of-type(2):before {
     content: "Latitude";
@@ -268,6 +287,6 @@ label {
     content: "Quality";
   }
   td:nth-of-type(7):before {
-    content: "Human Readable Location";
+    content: "Location";
   }
 }

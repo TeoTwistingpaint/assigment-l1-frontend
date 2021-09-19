@@ -1,5 +1,8 @@
 import useFetch from "./api/useFetch";
 import EarthquakesList from "./EarthquakesList";
+import Select from "./components/Select";
+import Info from "./components/Info";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Home = () => {
@@ -22,22 +25,10 @@ const Home = () => {
 
   return (
     <div className="wrapper__content home">
-      <label htmlFor="standard-select">Select a refresh time</label>
-      <div className="select">
-        <select id="standard-select" onChange={handleOnChange}>
-          <option value="null" defaultValue>
-            No refresh
-          </option>
-          <option value="5000">5 seconds</option>
-          <option value="30000">30 seconds</option>
-          <option value="60000">1 minute</option>
-          <option value="300000">5 minutes</option>
-          <option value="600000">10 minutes</option>
-        </select>
-        <span className="focus"></span>
-      </div>
+      <Info />
       {error && <div className="state state--error">{error}</div>}
       {isPending && <div className="state state--loading">Loading...</div>}
+      {!error && <Select handleOnChange={handleOnChange} />}
       {earthquakes && <EarthquakesList earthquakes={earthquakes} />}
     </div>
   );
