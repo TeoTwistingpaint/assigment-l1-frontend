@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Appquakes.is
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Start the project to see data about earthquakes in Iceland. Enjoy!
 
 ## Available Scripts
 
