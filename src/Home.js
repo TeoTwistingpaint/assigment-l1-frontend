@@ -2,7 +2,6 @@ import useFetch from "./api/useFetch";
 import EarthquakesList from "./EarthquakesList";
 import Select from "./components/Select";
 import Info from "./components/Info";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Home = () => {
